@@ -30,7 +30,7 @@ import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.google.firebase.crashlytics.FirebaseCrashlytics;
+// import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
@@ -167,7 +167,7 @@ public class TindroidApp extends Application implements LifecycleObserver {
         }
 
         // Disable Crashlytics for debug builds.
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG);
+        // FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG); TDM
 
         BroadcastReceiver br = new BroadcastReceiver() {
             @Override

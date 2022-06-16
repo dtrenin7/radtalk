@@ -23,7 +23,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.firebase.messaging.RemoteMessage;
+// import com.google.firebase.messaging.RemoteMessage; TDM
 
 import java.io.File;
 import java.lang.ref.WeakReference;
@@ -347,13 +347,13 @@ public class MessageActivity extends AppCompatActivity
         }
 
         // Check if activity was launched from a background push notification.
-        RemoteMessage msg = intent.getParcelableExtra("msg");
-        if (msg != null) {
-            RemoteMessage.Notification notification = msg.getNotification();
-            if (notification != null) {
-                return notification.getTag();
-            }
-        }
+        // RemoteMessage msg = intent.getParcelableExtra("msg");
+        // if (msg != null) {
+        //     RemoteMessage.Notification notification = msg.getNotification();
+        //     if (notification != null) {
+        //         return notification.getTag();
+        //     }
+        // } TDM
 
         if (TextUtils.isEmpty(name)) {
             // mTopicName is empty, so this is an external intent

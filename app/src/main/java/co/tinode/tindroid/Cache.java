@@ -2,7 +2,7 @@ package co.tinode.tindroid;
 
 import android.os.Build;
 
-import com.google.firebase.messaging.FirebaseMessaging;
+// import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.Locale;
 
@@ -41,15 +41,15 @@ public class Cache {
             TindroidApp.retainTinodeCache(sTinode);
         }
 
-        FirebaseMessaging fbId = FirebaseMessaging.getInstance();
-        //noinspection ConstantConditions: Google lies about getInstance not returning null.
-        if (fbId != null) {
-            fbId.getToken().addOnSuccessListener(token -> {
-                if (sTinode != null) {
-                    sTinode.setDeviceToken(token);
-                }
-            });
-        }
+        // FirebaseMessaging fbId = FirebaseMessaging.getInstance();
+        // //noinspection ConstantConditions: Google lies about getInstance not returning null.
+        // if (fbId != null) {
+        //     fbId.getToken().addOnSuccessListener(token -> {
+        //         if (sTinode != null) {
+        //             sTinode.setDeviceToken(token);
+        //         }
+        //     });
+        // } TDM
         return sTinode;
     }
 
@@ -58,7 +58,7 @@ public class Cache {
         if (sTinode != null) {
             sTinode.logout();
             sTinode = null;
-            FirebaseMessaging.getInstance().deleteToken();
+            // FirebaseMessaging.getInstance().deleteToken(); TDM
         }
     }
 
